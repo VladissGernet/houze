@@ -520,6 +520,175 @@
         </section>
       </li>
     </ul>
+    <section class="products-section__filters filters">
+      <h3 class="filters__title">Фильтры</h3>
+      <form class="filters-form" action="#" method="GET">
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Цена, ₽</legend>
+          <div class="filter-range">
+            <div class="filter-range__input-interval">
+              <label class="visually-hidden" for="filters-form-price-min">От</label>
+              <input class="filter-range__input input" type="text" name="filters-form-price-min" id="filters-form-price-min" value="от 1 290">
+              <label class="visually-hidden" for="filters-form-price-max">До</label>
+              <input class="filter-range__input input" type="text" name="filters-form-price-max" id="filters-form-price-max" value="до 5 000">
+            </div>
+            <div class="filter-range__controls">
+              <div class="filter-range__rail">
+                <div class="filter-range__track"></div>
+              </div>
+              <button class="filter-range__handle filter-range__handle-min">
+                <span class="visually-hidden">Установить минимальную стоимость</span>
+              </button>
+              <button class="filter-range__handle filter-range__handle-max">
+                <span class="visually-hidden">Установить максимальную стоимость</span>
+              </button>
+            </div>
+            <span class="filter-range__min-value">990</span>
+            <span class="filter-range__max-value">15 000</span>
+          </div>
+        </fieldset>
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Удобства и услуги</legend>
+          <input class="filters-form__search input" type="text" name="services-search" placeholder="Поиск">
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="kitchen" checked>
+            <span class="checkbox__label">Кухня</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="washer">
+            <span class="checkbox__label">Стиральная машина</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="conditioner" checked>
+            <span class="checkbox__label">Кондиционер</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="drying-machine">
+            <span class="checkbox__label">Сушильная машина</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="dishwasher">
+            <span class="checkbox__label">Посудомойка</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="tv">
+            <span class="checkbox__label">Телевизор</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="workspace" checked>
+            <span class="checkbox__label">Рабочая зона</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="fen" checked>
+            <span class="checkbox__label">Фен</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="fireplace">
+            <span class="checkbox__label">Камин</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="crib">
+            <span class="checkbox__label">Детская кроватка</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="iron">
+            <span class="checkbox__label">Утюг</span>
+          </label>
+          <label class="filters-form__option checkbox checkbox--disabled">
+            <input class="visually-hidden" type="checkbox" name="services" value="breakfast" disabled>
+            <span class="checkbox__label">Завтрак</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="services" value="beach">
+            <span class="checkbox__label">Пляж</span>
+          </label>
+          <a class="filters-form__link filters-form__link--collapse" href="#">Скрыть</a>
+        </fieldset>
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Площадь, м2</legend>
+          <div class="filter-range">
+            <div class="filter-range__input-interval">
+              <label class="visually-hidden" for="filters-form-price-min">От</label>
+              <input class="filter-range__input input" type="text" name="filters-form-square-min" id="filters-form-square-min" value="от 25">
+              <label class="visually-hidden" for="filters-form-price-max">До</label>
+              <input class="filter-range__input input" type="text" name="filters-form-square-max" id="filters-form-square-max" value="до 90">
+            </div>
+            <div class="filter-range__controls">
+              <div class="filter-range__rail">
+                <div class="filter-range__track"></div>
+              </div>
+              <button class="filter-range__handle filter-range__handle-min">
+                <span class="visually-hidden">Установить минимальную стоимость</span>
+              </button>
+              <button class="filter-range__handle filter-range__handle-max">
+                <span class="visually-hidden">Установить максимальную стоимость</span>
+              </button>
+            </div>
+            <span class="filter-range__min-value">20</span>
+            <span class="filter-range__max-value">180</span>
+          </div>
+        </fieldset>
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Язык хозяина</legend>
+          <input class="filters-form__search input" type="text" name="language-search" placeholder="Поиск">
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="language" value="russian">
+            <span class="checkbox__label">Русский</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="language" value="english">
+            <span class="checkbox__label">Английский</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="language" value="german">
+            <span class="checkbox__label">Немецкий</span>
+          </label>
+          <label class="filters-form__option checkbox">
+            <input class="visually-hidden" type="checkbox" name="language" value="french">
+            <span class="checkbox__label">Французский</span>
+          </label>
+          <a class="filters-form__link filters-form__link--expand" href="#">Смотреть все</a>
+        </fieldset>
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Срок аренды</legend>
+          <label class="filters-form__option radiobutton">
+            <input class="visually-hidden" type="radio" name="tenancy" value="day" checked>
+            <span class="radiobutton__label">Посуточно</span>
+          </label>
+          <label class="filters-form__option radiobutton radiobutton--disabled">
+            <input class="visually-hidden" type="radio" name="tenancy" value="month" disabled>
+            <span class="radiobutton__label">На несколько месяцев</span>
+          </label>
+          <label class="filters-form__option radiobutton">
+            <input class="visually-hidden" type="radio" name="tenancy" value="year">
+            <span class="radiobutton__label">От года</span>
+          </label>
+          <label class="filters-form__option radiobutton">
+            <input class="visually-hidden" type="radio" name="tenancy" value="tenancy-any">
+            <span class="radiobutton__label">Любой</span>
+          </label>
+        </fieldset>
+        <fieldset class="filters-form__fieldset">
+          <legend class="filters-form__fieldset-caption">Условия проживания</legend>
+          <label class="filters-form__item toggle">
+            <span class="toggle__label">Можно с питомцами</span>
+            <input class="visually-hidden" type="checkbox" name="housing-conditions" value="pets" checked>
+            <span class="toggle__slider"></span>
+          </label>
+          <label class="filters-form__item toggle">
+            <span class="toggle__label">Можно с детьми</span>
+            <input class="visually-hidden" type="checkbox" name="housing-conditions" value="kids">
+            <span class="toggle__slider"></span>
+          </label>
+          <label class="filters-form__item toggle">
+            <span class="toggle__label">Можно курить</span>
+            <input class="visually-hidden" type="checkbox" name="housing-conditions" value="smoke">
+            <span class="toggle__slider"></span>
+          </label>
+        </fieldset>
+        <button class="filters-form__reset button button--simple" type="reset">Сбросить фильтры</button>
+      </form>
+    </section>
     <div class="products-section__navigation">
       <ul class="pagination">
         <li class="pagination__item">
