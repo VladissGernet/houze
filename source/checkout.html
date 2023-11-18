@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новое объявление</title>
+</head>
+<body class="page">
+<header class="page__header page-header">
+  <nav class="page-header__navigation main-navigation">
+    <a class="main-navigation__logo logo" href="index.html">
+      <img class="logo__image" src="img/general/logo.svg" width="130" height="30"
+           alt="Логотип сайта сервиса недвижимости Houze.">
+    </a>
+    <ul class="site-navigation">
+      <li class="site-navigation__item">
+        <a class="site-navigation__link site-navigation__link--active" href="#">Аренда</a>
+      </li>
+      <li class="site-navigation__item ">
+        <a class="site-navigation__link" href="#">Покупка</a>
+      </li>
+      <li class="site-navigation__item">
+        <a class="site-navigation__link" href="#">Новостройки</a>
+      </li>
+      <li class="site-navigation__item">
+        <a class="site-navigation__link" href="#">Коммерческая</a>
+      </li>
+      <li class="site-navigation__item">
+        <a class="site-navigation__link" href="#">Детям</a>
+      </li>
+      <li class="site-navigation__item">
+        <a class="site-navigation__link" href="#">Ипотека</a>
+      </li>
+    </ul>
+    <a class="main-navigation__button button button--shortcut" href="#">Разместить объявление</a>
+    <ul class="user-navigation">
+      <li class="user-navigation__item user-navigation-item">
+        <a class="user-navigation__item-link notification-badge" href="#">
+          <span class="notification-badge__counter">7</span>
+          <span class="notification-badge__caption">Избранное</span>
+        </a>
+      </li>
+      <li class="user-navigation__item">
+        <a class="user-navigation__item-link notification-badge" href="#">
+          <span class="notification-badge__counter">1</span>
+          <span class="notification-badge__caption">Уведомления</span>
+        </a>
+      </li>
+      <li class="user-navigation__item">
+        <a class="user-navigation__item-link notification-badge" href="#">
+          <span class="notification-badge__caption">Личный кабинет</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main class="page__content page-content">
+  <article class="page-content__checkout checkout">
+    <h1 class="page-content__checkout checkout__title">Новое объявление</h1>
+    <ul class="checkout__progress progress">
+      <li class="progress__item progress__item--checked" data-value="section-1">Основные данные</li>
+      <li class="progress__item progress__item--active" data-value="section-2">Удобства и условия</li>
+      <li class="progress__item" data-value="section-3">Цена</li>
+      <li class="progress__item" data-value="section-4">Тарифы</li>
+      <li class="progress__item" data-value="section-5">Оплата</li>
+    </ul>
+    <div class="checkout__form">
+      <section class="checkout-section checkout-section--active" id="section-1">
+        <h2 class="visually-hidden">Основные данные</h2>
+        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
+          <fieldset class="checkout-form__section">
+            <legend class="checkout-form__section-title">Контакты</legend>
+            <div class="checkout-form__group from-group">
+              <p class="form-group__title">Сдает квартиру</p>
+              <div class="form-group__controls">
+                <label class="checkout-form__field radiobutton">
+                  <input class="visually-hidden" type="radio" name="landowner" id="owner">
+                  <span class="radiobutton__label">Собственник</span>
+                </label>
+                <label class="checkout-form__field radiobutton">
+                  <input class="visually-hidden" type="radio" name="landowner" id="agent">
+                  <span class="radiobutton__label">Агент</span>
+                </label>
+              </div>
+            </div>
+            <label class="checkout-form__field checkout-form__field--required">
+              <span class="checkout-form__field-label">Имя *</span>
+              <input class="checkout-form__field-control input" type="text" name="owner-name" id="owner-name"
+                     placeholder="Введите ваше имя">
+            </label>
+            <label class="checkout-form__field checkout-form__field--required">
+              <span class="checkout-form__field-label">Подтвердите мобильный телефон *</span>
+              <input class="checkout-form__field-control input" type="tel" name="owner-phone" id="owner-phone"
+                     placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+            </label>
+          </fieldset>
+          <fieldset class="checkout-form__section">
+            <legend class="checkout-form__section-title">Объект</legend>
+            <div class="checkout-form__group from-group">
+              <p class="form-group__title">
+                Тип жилья
+              </p>
+              <label class="checkout-form__field radiobutton">
+                <input class="visually-hidden" type="radio" name="landobject" value="flat" checked>
+                <span class="radiobutton__label">Квартира</span>
+              </label>
+              <label class="checkout-form__field radiobutton">
+                <input class="visually-hidden" type="radio" name="landobject" value="apartment">
+                <span class="radiobutton__label">Апартаменты</span>
+              </label>
+              <label class="checkout-form__field radiobutton">
+                <input class="visually-hidden" type="radio" name="landobject" value="house">
+                <span class="radiobutton__label">Дом</span>
+              </label>
+            </div>
+            <label class="checkout-form__field checkout-form__field--required">
+              <span class="checkout-form__field-label">Адрес *</span>
+              <input class="checkout-form__field-control input" type="text" name="object-address" id="object-address"
+                     placeholder="Укажите город, улицу, дом и квартиру">
+            </label>
+            <label class="checkout-form__field">
+              <span class="checkout-form__field-label">Количество комнат</span>
+              <select class="checkout-form__field-control select" name="room-count" id="room-count">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </label>
+            <label class="checkout-form__field">
+              <span class="checkout-form__field-label">Общая площадь</span>
+              <input class="checkout-form__field-control input" type="number" name="total-area" id="total-area"
+                     placeholder="м2">
+            </label>
+          </fieldset>
+          <fieldset class="checkout-form__section">
+            <legend class="checkout-form__section-title">Фото</legend>
+            <p class="checkout-form__disclaimer">
+              Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих
+              объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
+            </p>
+<!--            Пустое поле загрузки фотографий.-->
+<!--            <div class="photo-upload">-->
+<!--              <label class="photo-upload__label" for="object-photo">-->
+<!--                <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>-->
+<!--              </label>-->
+<!--              <input class="photo-upload__control" type="file" id="object-photo">-->
+<!--              <div class="photo-upload__container"></div>-->
+<!--            </div>-->
+            <div class="photo-upload">
+              <label class="photo-upload__label" for="object-photo">
+                <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>
+              </label>
+              <input class="photo-upload__control" type="file" id="object-photo">
+              <div class="photo-upload__container">
+                <div class="photo-upload__item">
+                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
+                  <div class="photo-upload__buttons">
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Повернуть</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="photo-upload__item">
+                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
+                  <div class="photo-upload__buttons">
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Повернуть</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="photo-upload__item">
+                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
+                  <div class="photo-upload__buttons">
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Удалить</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Повернуть</span>
+                    </button>
+                    <button class="photo-upload__button" type="button">
+                      <span class="visually-hidden">Увеличить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <div class="checkout-form__controls">
+            <button class="checkout-form__button button button--primary" type="submit" data-target="section-2">
+              Далее
+            </button>
+          </div>
+        </form>
+      </section>
+    </div>
+  </article>
+
+
+  <section class="new-ad">
+    <h1 class="new-ad__title">Новое объявление</h1>
+    <form class="new-ad__form create-ad" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
+      <div class="create-ad__group">
+        <h2 class="create-ad__title">Контакты</h2>
+        <fieldset class="create-ad__fieldset">
+          <legend class="create-ad__fieldset-caption">Сдает квартиру</legend>
+          <label class="create-ad__option radiobutton">
+            <input class="visually-hidden" type="radio" name="create-ad-owner" value="owner" checked>
+            <span class="radiobutton__label">Собственник</span>
+          </label>
+          <label class="create-ad__option radiobutton">
+            <input class="visually-hidden" type="radio" name="create-ad-agent" value="agent">
+            <span class="radiobutton__label">Агент</span>
+          </label>
+        </fieldset>
+        <div class="create-ad__input-wrapper">
+          <label class="create-ad__username-label" for="create-ad-username">Имя *</label>
+          <input class="create-ad__username-input" type="text" id="create-ad-username" name="create-ad-username"
+                 placeholder="Введите ваше имя">
+        </div>
+        <div class="create-ad__input-wrapper">
+          <label class="create-ad__username-label" for="create-ad-phone">Подтвердите мобильный телефон *</label>
+          <input class="create-ad__username-input" type="tel" id="create-ad-phone" name="create-ad-phone"
+                 placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+        </div>
+      </div>
+      <div class="create-ad__group">
+        <h2 class="create-ad__title">Объект</h2>
+        <fieldset class="create-ad__fieldset">
+          <legend class="create-ad__fieldset-caption">Тип жилья</legend>
+          <label class="create-ad__option radiobutton">
+            <input class="visually-hidden" type="radio" name="create-ad-flat" value="flat" checked>
+            <span class="radiobutton__label">Квартира</span>
+          </label>
+          <label class="create-ad__option radiobutton">
+            <input class="visually-hidden" type="radio" name="create-ad-apartments" value="apartments">
+            <span class="radiobutton__label">Апартаменты</span>
+          </label>
+          <label class="create-ad__option radiobutton">
+            <input class="visually-hidden" type="radio" name="create-ad-house" value="house">
+            <span class="radiobutton__label">Дом</span>
+          </label>
+        </fieldset>
+        <div class="create-ad__input-wrapper">
+          <label class="create-ad__label" for="create-ad-address">Адрес *</label>
+          <input class="create-ad__input" type="text" id="create-ad-address" name="create-ad-address"
+                 placeholder="Укажите город, улицу, дом и квартиру">
+        </div>
+        <div class="create-ad__input-wrapper">
+          <label class="create-ad__label" for="create-ad-rooms"></label>
+          <select class="create-ad__input" name="create-ad-rooms" id="create-ad-rooms">
+            <option class="create-ad__option" value="">1</option>
+          </select>
+        </div>
+        <div class="create-ad__input-wrapper">
+          <label class="create-ad__label" for="create-ad-"></label>
+          <input class="create-ad__label" type="number" id="create-ad-" name="create-ad-square">
+        </div>
+      </div>
+      <div class="create-ad__group">
+        <h2 class="create-ad__title">Фото</h2>
+        <p class="create-ad__upload-description">
+          Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих
+          объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
+        </p>
+        <div class="create-ad__input-wrapper">
+          <label class="visually-hidden" for="create-ad-upload"></label>
+          <input class="create-ad__upload" type="file" id="create-ad-upload" name="create-ad-upload" placeholder="">
+        </div>
+      </div>
+      <button class="create-ad__button button button--accent" type="button">Далее</button>
+    </form>
+  </section>
+</main>
+<footer class="page__footer page-footer">
+  <p class="page-footer__copyright">ООО «Хауз» © 2021 Все права защищены</p>
+  <a class="page-footer__privacy-policy" href="#">Политика конфиденциальности</a>
+</footer>
+</body>
+</html>
