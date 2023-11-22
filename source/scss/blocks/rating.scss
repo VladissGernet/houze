@@ -18,3 +18,24 @@
   font-size: 14px;
   line-height: 1;
 }
+
+.rating--size-m .rating__star {
+  width: 16px;
+  height: 16px;
+}
+
+.rating--size-m .rating__value {
+  font-size: 16px;
+  line-height: 1;
+}
+
+.rating--size-xl .rating__star {
+  width: 20px;
+  height: 20px;
+}
+
+.rating--size-xl .rating__value {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+}

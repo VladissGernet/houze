@@ -1,0 +1,34 @@
+.product-services {
+  margin: 0;
+  column-count: 2;
+  column-gap: 45px;
+}
+
+.product-services__item {
+  position: relative;
+  margin-bottom: 30px;
+  break-inside: avoid;
+}
+
+.product-services__item-img {
+  width: 19px;
+  height: 16px;
+  object-fit: contain;
+  fill: #0a121f;
+}
+
+.product-services__item-name {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.product-services__item-value {
+  margin-left: 25px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1;
+}

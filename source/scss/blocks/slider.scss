@@ -1,0 +1,38 @@
+.slider {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  gap: 41px;
+  align-items: center;
+  align-content: start;
+}
+
+.slider__viewport {
+  grid-area: 1 / 1 / 2 / 2;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.slider__img {
+  display: block;
+}
+
+.slider__previews {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.slider__button-prev {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  justify-self: start;
+  z-index: 1;
+  margin-left: 40px;
+}
+
+.slider__button-next {
+  grid-area: 1 / 1 / 2 / 2;
+  align-self: center;
+  justify-self: end;
+  z-index: 1;
+  margin-right: 40px;
+}

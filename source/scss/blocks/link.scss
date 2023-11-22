@@ -1,0 +1,19 @@
+.link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #f85a47;
+  text-decoration: none;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.link:active {
+  opacity: 0.5;
+}
+
+.link--decoration {
+  text-decoration: underline;
+}

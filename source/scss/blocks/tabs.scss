@@ -1,0 +1,31 @@
+.tabs__navigation {
+  display: flex;
+  list-style: none;
+  margin: 0 0 35px 0;
+  padding: 0;
+  gap: 40px;
+  border-bottom: 1px solid rgba(10, 18, 31, 0.1);
+}
+
+.tabs__page {
+  display: none;
+}
+
+.tabs__page--active {
+  display: block;
+}
+
+.tabs__navigation-link {
+  display: block;
+  padding-bottom: 7px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  color: #979899;
+  text-decoration: none;
+}
+
+.tabs__navigation-link--active {
+  color: #f85a47;
+  border-bottom: 1px solid #f85a47;
+}
