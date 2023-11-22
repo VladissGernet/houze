@@ -1,0 +1,20 @@
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating__star {
+  width: 14px;
+  height: 14px;
+  fill: #f85a47;
+}
+
+.rating--disabled .rating__star {
+  fill: #979899;
+}
+
+.rating__value {
+  font-size: 14px;
+  line-height: 1;
+}

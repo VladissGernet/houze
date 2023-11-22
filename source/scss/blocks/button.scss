@@ -1,0 +1,39 @@
+.button {
+  display: inline-block;
+  font-family: inherit;
+  color: inherit;
+  text-decoration: none;
+  border: none;
+  background-color: transparent;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.button--shortcut {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+  padding: 13px 20px;
+  color: #ffffff;
+  background-color: #f85a47;
+  border-radius: 30px;
+}
+
+.button--secondary {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  padding: 14px 20px;
+  color: #f85a47;
+  background-color: transparent;
+  border: 1px solid #f85a47;
+  border-radius: 6px;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:active {
+  opacity: 0.5;
+}
