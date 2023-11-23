@@ -1,0 +1,75 @@
+.filters-form {
+  padding: 40px 30px 50px;
+  font-size: 14px;
+  line-height: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.filters-form__title {
+  margin: 0 0 40px 0;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 26px;
+}
+
+.filters-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.filters-form__fieldset-caption {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.filters-form__fieldset-caption sup {
+  font-size: 10px;
+  line-height: 1;
+}
+
+.filters-form__search {
+  margin-bottom: 5px;
+}
+
+.filters-form__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin-top: 5px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  color: #f85a47;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.filters-form__button svg {
+  stroke: #f85a47;
+}
+
+.filters-form__button--expand svg {
+  transform: scale(1, -1);
+}
+
+.filters-form__button:hover {
+  opacity: 0.7;
+}
+
+.filters-form__button:active {
+  opacity: 0.5;
+}
+
+.filters-form__reset {
+  width: 100%;
+}
