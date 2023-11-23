@@ -3,20 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="css/style.css" as="style" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+  <link rel="manifest" href="manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   <title>Новое объявление</title>
 </head>
 <body class="page">
 <header class="page__header page-header">
-  <nav class="page-header__navigation main-navigation">
-    <a class="main-navigation__logo logo" href="index.html">
-      <img class="logo__image" src="img/general/logo.svg" width="130" height="30"
-           alt="Логотип сайта сервиса недвижимости Houze.">
+  <nav class="page-header__navigation container main-navigation">
+    <a class="main-navigation__logo logo" href="#">
+      <img class="logo__img" src="img/general/logo.svg" width="130" height="30" alt="Логотип агентства по недвижимости">
     </a>
-    <ul class="site-navigation">
+    <ul class="main-navigation__site-navigation site-navigation">
       <li class="site-navigation__item">
         <a class="site-navigation__link site-navigation__link--active" href="#">Аренда</a>
       </li>
-      <li class="site-navigation__item ">
+      <li class="site-navigation__item">
         <a class="site-navigation__link" href="#">Покупка</a>
       </li>
       <li class="site-navigation__item">
@@ -26,37 +45,49 @@
         <a class="site-navigation__link" href="#">Коммерческая</a>
       </li>
       <li class="site-navigation__item">
-        <a class="site-navigation__link" href="#">Детям</a>
-      </li>
-      <li class="site-navigation__item">
         <a class="site-navigation__link" href="#">Ипотека</a>
       </li>
     </ul>
     <a class="main-navigation__button button button--shortcut" href="#">Разместить объявление</a>
-    <ul class="user-navigation">
+    <ul class="main-navigation__user-navigation user-navigation">
       <li class="user-navigation__item user-navigation-item">
-        <a class="user-navigation__item-link notification-badge" href="#">
-          <span class="notification-badge__counter">7</span>
-          <span class="notification-badge__caption">Избранное</span>
+        <a class="user-navigation-item__link" href="#">
+          <div class="user-navigation-item__img-container">
+            <svg class="user-navigation-item__img">
+              <use xlink:href="img/stack.svg#favorite"></use>
+            </svg>
+          </div>
+          <span class="visually-hidden">Избранное</span>
+          <span class="user-navigation-item__notification notification-badge">3</span>
         </a>
       </li>
-      <li class="user-navigation__item">
-        <a class="user-navigation__item-link notification-badge" href="#">
-          <span class="notification-badge__counter">1</span>
-          <span class="notification-badge__caption">Уведомления</span>
+      <li class="user-navigation__item user-navigation-item">
+        <a class="user-navigation-item__link" href="#">
+          <div class="user-navigation-item__img-container">
+            <svg class="user-navigation-item__img">
+              <use xlink:href="img/stack.svg#notifications"></use>
+            </svg>
+          </div>
+          <span class="visually-hidden">Уведомления</span>
+          <span class="user-navigation-item__notification notification-badge">1</span>
         </a>
       </li>
-      <li class="user-navigation__item">
-        <a class="user-navigation__item-link notification-badge" href="#">
-          <span class="notification-badge__caption">Личный кабинет</span>
+      <li class="user-navigation__item user-navigation-item">
+        <a class="user-navigation-item__link" href="#">
+          <div class="user-navigation-item__img-container">
+            <svg class="user-navigation-item__img">
+              <use xlink:href="img/stack.svg#user"></use>
+            </svg>
+          </div>
+          <span class="user-navigation-item__caption">Личный кабинет</span>
         </a>
       </li>
     </ul>
   </nav>
 </header>
-<main class="page__content page-content">
+<main class="page__content page-content container">
   <article class="page-content__checkout checkout">
-    <h1 class="page-content__checkout checkout__title">Новое объявление</h1>
+    <h1 class="checkout__title">Новое объявление</h1>
     <ul class="checkout__progress progress">
       <li class="progress__item progress__item--checked" data-value="section-1">Основные данные</li>
       <li class="progress__item progress__item--active" data-value="section-2">Удобства и условия</li>
@@ -64,441 +95,430 @@
       <li class="progress__item" data-value="section-4">Тарифы</li>
       <li class="progress__item" data-value="section-5">Оплата</li>
     </ul>
-    <div class="checkout__form">
-      <section class="checkout-section checkout-section--active" id="section-1">
+    <form class="checkout__form checkout-form" action="https://echo.htmlacademy.ru/courses" method="POST">
+      <section class="checkout-form__page" id="section-1">
         <h2 class="visually-hidden">Основные данные</h2>
-        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Контакты</legend>
-            <div class="checkout-form__group form-group">
-              <p class="form-group__title">Сдает квартиру</p>
-              <div class="form-group__controls">
-                <label class="checkout-form__field radiobutton">
-                  <input class="visually-hidden" type="radio" name="landowner" id="owner">
-                  <span class="radiobutton__label">Собственник</span>
-                </label>
-                <label class="checkout-form__field radiobutton">
-                  <input class="visually-hidden" type="radio" name="landowner" id="agent">
-                  <span class="radiobutton__label">Агент</span>
-                </label>
-              </div>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Контакты</legend>
+          <div class="form-group">
+            <p class="form-group__title">Сдает квартиру</p>
+            <div class="form-group__controls">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="landowner" value="owner" checked>
+                <span class="radiobutton__label">Собственник</span>
+              </label>
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="landowner" value="agent">
+                <span class="radiobutton__label">Агент</span>
+              </label>
             </div>
-            <label class="checkout-form__field checkout-form__field--required">
-              <span class="checkout-form__field-label">Имя *</span>
-              <input class="checkout-form__field-control input" type="text" name="owner-name" id="owner-name"
-                     placeholder="Введите ваше имя">
-            </label>
-            <label class="checkout-form__field checkout-form__field--required">
-              <span class="checkout-form__field-label">Подтвердите мобильный телефон *</span>
-              <input class="checkout-form__field-control input" type="tel" name="owner-phone" id="owner-phone"
-                     placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
-            </label>
-          </fieldset>
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Объект</legend>
-            <div class="checkout-form__group form-group">
-              <p class="form-group__title">
-                Тип жилья
-              </p>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="landobject" value="flat" checked>
+          </div>
+          <label class="form-field form-field--size-m form-field--required">
+            <span class="form-field__label">Имя</span>
+            <input class="form-field__control input" type="text" name="owner-name" id="owner-name"
+                   placeholder="Введите ваше имя">
+          </label>
+          <label class="form-field form-field--size-m form-field--required">
+            <span class="form-field__label">Подтвердите мобильный телефон</span>
+            <input class="form-field__control input" type="tel" name="owner-phone" id="owner-phone"
+                   placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
+          </label>
+        </fieldset>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Объект</legend>
+          <div class="form-group">
+            <p class="form-group__title">Тип жилья</p>
+            <div class="form-group__controls">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="landobject" value="flat" checked>
                 <span class="radiobutton__label">Квартира</span>
               </label>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="landobject" value="apartment">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="landobject" value="apartment">
                 <span class="radiobutton__label">Апартаменты</span>
               </label>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="landobject" value="house">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="landobject" value="house">
                 <span class="radiobutton__label">Дом</span>
               </label>
             </div>
-            <label class="checkout-form__field checkout-form__field--required">
-              <span class="checkout-form__field-label">Адрес *</span>
-              <input class="checkout-form__field-control input" type="text" name="object-address" id="object-address"
-                     placeholder="Укажите город, улицу, дом и квартиру">
-            </label>
-            <label class="checkout-form__field">
-              <span class="checkout-form__field-label">Количество комнат</span>
-              <select class="checkout-form__field-control select" name="room-count" id="room-count">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
-            </label>
-            <label class="checkout-form__field">
-              <span class="checkout-form__field-label">Общая площадь</span>
-              <input class="checkout-form__field-control input" type="number" name="total-area" id="total-area"
-                     placeholder="м2">
-            </label>
-          </fieldset>
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Фото</legend>
-            <p class="checkout-form__disclaimer">
+          </div>
+          <label class="form-field form-field--size-xl form-field--required">
+            <span class="form-field__label">Адрес</span>
+            <input class="form-field__control input" type="text" name="object-address" id="object-address"
+                   placeholder="Укажите город, улицу, дом и квартиру">
+          </label>
+          <label class="form-field form-field--size-s">
+            <span class="form-field__label">Количество комнат</span>
+            <select class="form-field__control select" name="room-count" id="room-count">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+            </select>
+          </label>
+          <label class="form-field form-field--size-s">
+            <span class="form-field__label">Общая площадь</span>
+            <span class="form-field__control input-mu">
+              <input class="input-mu__control input" type="text" name="total-area" id="total-area">
+              <span class="input-mu__caption">м<sup>2</sup></span>
+            </span>
+          </label>
+        </fieldset>
+        <fieldset class="checkout-form__fieldset form-fieldset form-fieldset--compact">
+          <legend class="form-fieldset__caption">Фото</legend>
+          <!--<div class="photo-upload">
+            <p class="photo-upload__description">
+            Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих
+            объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
+            </p>
+            <div class="photo-upload__content">
+              <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>
+              <label class="photo-upload__label" for="object-photo">Выбрать с компьютера</label>
+              <input class="photo-upload__control" type="file" id="object-photo">
+              <div class="photo-upload__previews"></div>
+            </div>
+          </div>-->
+          <div class="photo-upload photo-upload--filled">
+            <p class="photo-upload__description">
               Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих
               объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
             </p>
-<!--            Пустое поле загрузки фотографий.-->
-<!--            <div class="photo-upload">-->
-<!--              <label class="photo-upload__label" for="object-photo">-->
-<!--                <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>-->
-<!--              </label>-->
-<!--              <input class="photo-upload__control" type="file" id="object-photo">-->
-<!--              <div class="photo-upload__container"></div>-->
-<!--            </div>-->
-            <div class="photo-upload">
-              <label class="photo-upload__label" for="object-photo">
-                <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>
-              </label>
+            <div class="photo-upload__content">
+              <span class="photo-upload__label-text">Для загрузки перетащите файл сюда</span>
+              <label class="photo-upload__label" for="object-photo">Добавить фото</label>
               <input class="photo-upload__control" type="file" id="object-photo">
-              <div class="photo-upload__container">
-                <div class="photo-upload__item">
-                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
+              <div class="photo-upload__previews">
+                <div class="photo-upload__preview">
+                  <img class="photo-upload__img" src="img/product/photo-12.jpg" width="170" height="120" alt>
                   <div class="photo-upload__buttons">
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Удалить</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#trash"></use>
+                      </svg>
                     </button>
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Повернуть</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#rotate"></use>
+                      </svg>
                     </button>
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Увеличить</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#zoom-in"></use>
+                      </svg>
                     </button>
                   </div>
                 </div>
-                <div class="photo-upload__item">
-                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
+                <div class="photo-upload__preview">
+                  <img class="photo-upload__img" src="img/product/photo-11.jpg" width="170" height="120" alt>
                   <div class="photo-upload__buttons">
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Удалить</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#trash"></use>
+                      </svg>
                     </button>
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Повернуть</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#rotate"></use>
+                      </svg>
                     </button>
                     <button class="photo-upload__button" type="button">
                       <span class="visually-hidden">Увеличить</span>
-                    </button>
-                  </div>
-                </div>
-                <div class="photo-upload__item">
-                  <img class="photo-upload__img" src="img/" width="" height="" alt=".">
-                  <div class="photo-upload__buttons">
-                    <button class="photo-upload__button" type="button">
-                      <span class="visually-hidden">Удалить</span>
-                    </button>
-                    <button class="photo-upload__button" type="button">
-                      <span class="visually-hidden">Повернуть</span>
-                    </button>
-                    <button class="photo-upload__button" type="button">
-                      <span class="visually-hidden">Увеличить</span>
+                      <svg class="photo-upload__button-icon">
+                        <use xlink:href="img/stack.svg#zoom-in"></use>
+                      </svg>
                     </button>
                   </div>
                 </div>
               </div>
             </div>
-          </fieldset>
-          <div class="checkout-form__controls">
-            <button class="checkout-form__button button button--primary" type="submit" data-target="section-2">
-              Далее
-            </button>
           </div>
-        </form>
+        </fieldset>
       </section>
-      <section class="checkout-section" id="section-2">
+      <section class="checkout-form__page" id="section-2">
         <h2 class="visually-hidden">Удобства и условия</h2>
-        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Удобства и услуги</legend>
-            <div class="column-layout">
-              <div class="form-group form-group--column">
-                <p class="form-group__title">
-                  Общее
-                </p>
-                <div class="form-group__controls">
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="furnitureinaroom">
-                    <span class="checkbox__label">Мебель в комнатах</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="furnitureinakitchen" checked>
-                    <span class="checkbox__label">Мебель на кухне</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="courtyardwindows">
-                    <span class="checkbox__label">Окна во двор</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="windowstothestreet" checked>
-                    <span class="checkbox__label">Окна на улицу</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="balcony">
-                    <span class="checkbox__label">Балкон</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="loggia">
-                    <span class="checkbox__label">Лоджия</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form-group form-group--column">
-                <p class="form-group__title">Техника</p>
-                <div class="form-group__controls">
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="fridge" checked>
-                    <span class="checkbox__label">Холодильник</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="airconditioning" checked>
-                    <span class="checkbox__label">Кондиционер</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="washingmachine" checked>
-                    <span class="checkbox__label">Стиральная машина</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="dryingmachine">
-                    <span class="checkbox__label">Сушильная машина</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="tv" checked>
-                    <span class="checkbox__label">Телевизор</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="hairdryer">
-                    <span class="checkbox__label">Фен</span>
-                  </label>
-                </div>
-              </div>
-              <div class="form-group form-group--column">
-                <p class="form-group__title">Комфорт</p>
-                <div class="form-group__controls">
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="bath">
-                    <span class="checkbox__label">Ванна</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="showercabin" checked>
-                    <span class="checkbox__label">Душевая кабина</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="internet" checked>
-                    <span class="checkbox__label">Интернет</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="splitbathroom">
-                    <span class="checkbox__label">Раздельный санузел</span>
-                  </label>
-                  <label class="checkout-form__field checkbox">
-                    <input class="visually-hidden" type="checkbox" name="services" value="bathcombination" checked>
-                    <span class="checkbox__label">Совмещенный санузел</span>
-                  </label>
-                </div>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Удобства и услуги</legend>
+          <div class="form-fieldset__column-layout">
+            <div class="form-group form-group--column">
+              <p class="form-group__title">Общее</p>
+              <div class="form-group__controls">
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="furnitureinaroom">
+                  <span class="checkbox__label">Мебель в комнатах</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="furnitureinakitchen" checked>
+                  <span class="checkbox__label">Мебель на кухне</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="courtyardwindows">
+                  <span class="checkbox__label">Окна во двор</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="windowstothestreet" checked>
+                  <span class="checkbox__label">Окна на улицу</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="balcony">
+                  <span class="checkbox__label">Балкон</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="loggia">
+                  <span class="checkbox__label">Лоджия</span>
+                </label>
               </div>
             </div>
-          </fieldset>
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Условия проживания</legend>
-            <label class="checkout-form__toggle toggle">
-              <span class="toggle__label">Можно с питомцами</span>
-              <input class="visually-hidden" type="checkbox" name="housing-conditions" value="pets" checked>
-              <span class="toggle__slider"></span>
-            </label>
-            <label class="checkout-form__toggle toggle">
-              <span class="toggle__label">Можно с детьми</span>
-              <input class="visually-hidden" type="checkbox" name="housing-conditions" value="kids" checked>
-              <span class="toggle__slider"></span>
-            </label>
-            <label class="checkout-form__toggle toggle">
-              <span class="toggle__label">Можно курить</span>
-              <input class="visually-hidden" type="checkbox" name="housing-conditions" value="smoke">
-              <span class="toggle__slider"></span>
-            </label>
-          </fieldset>
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Заселение</legend>
-            <div class="checkout-form__group form-group">
-              <p class="form-group__title">
-                Способ заселения
-              </p>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="housing-method" value="contact" checked>
+            <div class="form-group form-group--column">
+              <p class="form-group__title">Техника</p>
+              <div class="form-group__controls">
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="fridge" checked>
+                  <span class="checkbox__label">Холодильник</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="airconditioning" checked>
+                  <span class="checkbox__label">Кондиционер</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="washingmachine" checked>
+                  <span class="checkbox__label">Стиральная машина</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="dryingmachine">
+                  <span class="checkbox__label">Сушильная машина</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="tv" checked>
+                  <span class="checkbox__label">Телевизор</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="hairdryer">
+                  <span class="checkbox__label">Фен</span>
+                </label>
+              </div>
+            </div>
+            <div class="form-group form-group--column">
+              <p class="form-group__title">Комфорт</p>
+              <div class="form-group__controls">
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="bath">
+                  <span class="checkbox__label">Ванна</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="showercabin" checked>
+                  <span class="checkbox__label">Душевая кабина</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="internet" checked>
+                  <span class="checkbox__label">Интернет</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="splitbathroom">
+                  <span class="checkbox__label">Раздельный санузел</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__control" type="checkbox" name="services" value="bathcombination" checked>
+                  <span class="checkbox__label">Совмещенный санузел</span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Условия проживания</legend>
+          <div class="form-fieldset__column-layout form-fieldset__column-layout--single">
+            <div class="form-group form-group--column">
+              <div class="form-group__controls">
+                <label class="toggle">
+                  <span class="toggle__label">Можно с питомцами</span>
+                  <input class="toggle__control" type="checkbox" name="housing-conditions" value="pets" checked>
+                  <span class="toggle__slider"></span>
+                </label>
+                <label class="toggle">
+                  <span class="toggle__label">Можно с детьми</span>
+                  <input class="toggle__control" type="checkbox" name="housing-conditions" value="kids" checked>
+                  <span class="toggle__slider"></span>
+                </label>
+                <label class="toggle">
+                  <span class="toggle__label">Можно курить</span>
+                  <input class="toggle__control" type="checkbox" name="housing-conditions" value="smoke">
+                  <span class="toggle__slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Заселение</legend>
+          <div class="form-group">
+            <p class="form-group__title">Способ заселения</p>
+            <div class="form-group__controls">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="housing-method" value="contact" checked>
                 <span class="radiobutton__label">Контактный</span>
               </label>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="housing-method" value="contact-free">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="housing-method" value="contact-free">
                 <span class="radiobutton__label">Бесконтактный</span>
               </label>
-              <label class="checkout-form__field radiobutton">
-                <input class="visually-hidden" type="radio" name="housing-method" value="any">
-                <span class="radiobutton__label">Бесконтактный</span>
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="housing-method" value="any">
+                <span class="radiobutton__label">Любой</span>
               </label>
             </div>
-            <div class="checkout-form__layout">
-              <label class="checkout-form__label">
-                <span class="checkout-form__field-label">Время заезда</span>
-                <select class="checkout-form__field-control select" name="check-in-time-1" id="check-in-time-1">
-                  <option>после 14-00</option>
-                </select>
-              </label>
-              <label class="checkout-form__label">
-                <span class="checkout-form__field-label">Время выезда</span>
-                <select class="checkout-form__field-control select" name="check-out-time-1" id="check-out-time-1">
-                  <option>до 12:00</option>
-                </select>
-              </label>
-            </div>
-            <div class="checkout-form__group form-group">
-              <p class="form-group__title">
-                Предпочтительный способ связи
-              </p>
-              <div class="form-group__controls">
-                <label class="checkout-form__field radiobutton">
-                  <input class="visually-hidden" type="radio" name="contact-method" value="call" checked>
-                  <span class="radiobutton__label">Только звонки</span>
-                </label>
-                <label class="checkout-form__field radiobutton">
-                  <input class="visually-hidden" type="radio" name="contact-method" value="sms">
-                  <span class="radiobutton__label">Только сообщения</span>
-                </label>
-                <label class="checkout-form__field radiobutton">
-                  <input class="visually-hidden" type="radio" name="contact-method" value="any">
-                  <span class="radiobutton__label">Любой</span>
-                </label>
-              </div>
-            </div>
-            <label class="checkout-form__field">
-              <span class="checkout-form__field-label">Комментарий</span>
-              <textarea class="checkout-form__field-control textarea" id="comment" name="comment"
-                        placeholder=""></textarea>
+          </div>
+          <div class="form-fieldset__column-layout">
+            <label class="form-field">
+              <span class="field-label">Время заезда</span>
+              <select class="checkout-form__field-control select" name="check-in-time-1" id="check-in-time-1">
+                <option>после 14-00</option>
+              </select>
             </label>
-            <div class="checkout-form__controls">
-              <button class="checkout-form__button button button--simple" type="button" data-target="section-1">
-                Назад</button>
-              <button class="checkout-form__button button button--primary" type="submit" data-target="section-3">
-                Далее</button>
+            <label class="form-field">
+              <span class="form-field__label">Время выезда</span>
+              <select class="form-field__control select" name="check-out-time-1" id="check-out-time-1">
+                <option>до 12:00</option>
+              </select>
+            </label>
+          </div>
+          <div class="checkout-form__group form-group">
+            <p class="form-group__title">Предпочтительный способ связи</p>
+            <div class="form-group__controls">
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="contact-method" value="call">
+                <span class="radiobutton__label">Только звонки</span>
+              </label>
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="contact-method" value="sms">
+                <span class="radiobutton__label">Только сообщения</span>
+              </label>
+              <label class="radiobutton">
+                <input class="radiobutton__control" type="radio" name="contact-method" value="any" checked>
+                <span class="radiobutton__label">Любой</span>
+              </label>
             </div>
-          </fieldset>
-        </form>
+          </div>
+          <label class="form-field form-field--size-l">
+            <span class="form-field__label">Комментарий</span>
+            <textarea class="form-field__control textarea" name="comment" id="comment" placeholder=""></textarea>
+          </label>
+        </fieldset>
       </section>
-      <section class="checkout-section" id="section-3">
+      <section class="checkout-form__page" id="section-3">
         <h2 class="visually-hidden">Цена</h2>
-        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form">Цена</legend>
-            <div class="column-layout">
-              <label class="checkout-form__field">
-                <span class="checkout-form__field-label">Арендная плата</span>
-                <input class="checkout-form__field-control input" type="text" name="rent" id="rent" placeholder="₽">
-              </label>
-              <label class="checkout-form__field">
-                <span class="checkout-form__field-label">Коммунальные платежи</span>
-                <input class="checkout-form__field-control input" type="text" name="utility-bills" id="utility-bills" placeholder="₽">
-              </label>
-              <label class="checkout-form__field checkbox">
-                <input class="visually-hidden" type="checkbox" name="counter-separately" id="counter-separately" checked>
-                <span class="checkbox__label">Оплата по счетчикам отдельно</span>
-              </label>
-            </div>
-            <div class="column-layout">
-              <label class="checkout-form__field">
-                <span class="checkout-form__field-label">Предоплата</span>
-                <select class="checkout-form__field-control select" name="deposit-period" id="deposit-period">
-                  <option>1 месяц</option>
-                  <option>2 месяца</option>
-                  <option>3 месяца</option>
-                </select>
-              </label>
-              <label class="checkout-form__field">
-                <span class="checkout-form__field-label">Залог собственнику</span>
-                <input class="checkout-form__field-control input" type="text" name="deposit" id="deposit" placeholder="₽">
-              </label>
-              <label class="checkout-form__field checkbox">
-                <input class="visually-hidden" type="checkbox" name="none-deposit" id="none-deposit">
-                <span class="checkbox__label">Без залога</span>
-              </label>
-            </div>
-          </fieldset>
-          <fieldset class="checkout-form__section">
-            <legend class="checkout-form__section-title">Возможен онлайн-показ</legend>
-            <p class="checkout-form__section-description">
-              Выберите, если готовы показать объект онлайн с помощью сервисов видео‑звонков.
-            </p>
-            <label class="checkout-form__field checkbox">
-              <input class="visually-hidden" type="checkbox" name="online-show" checked>
-              <span class="checkbox__label">Готовы показать онлайн</span>
+        <fieldset class="checkout-form__fieldset form-fieldset">
+          <legend class="form-fieldset__caption">Цена</legend>
+          <div class="form-fieldset__column-layout">
+            <label class="form-field">
+              <span class="form-field__label">Арендная плата</span>
+              <span class="form-field__control input-mu">
+                    <input class="form-field__control input" type="text" name="rent" id="rent">
+                    <span class="input-mu__caption">₽</span>
+                  </span>
             </label>
-          </fieldset>
-          <div class="checkout-form__controls">
-            <button class="checkout-form__button button button--simple" type="button" data-target="section-2">Назад
-            </button>
-            <button class="checkout-form__button button button--primary" type="submit" data-target="section-4">Далее
-            </button>
+            <label class="form-field">
+              <span class="form-field__label">Коммунальные платежи</span>
+              <span class="form-field__control input-mu">
+                    <input class="form-field__control input" type="text" name="utility-bills" id="utility-bills">
+                    <span class="input-mu__caption">₽</span>
+                  </span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__control" type="checkbox" name="counter-separately" id="counter-separately"
+                     checked>
+              <span class="checkbox__label">Оплата по счетчикам отдельно</span>
+            </label>
+            <label class="form-field">
+              <span class="form-field__label">Предоплата</span>
+              <select class="form-field__control select" name="deposit-period" id="deposit-period">
+                <option>1 месяц</option>
+                <option>2 месяца</option>
+                <option>3 месяца</option>
+              </select>
+            </label>
+            <label class="form-field">
+              <span class="form-field__label">Залог собственнику</span>
+              <span class="form-field__control input-mu">
+                    <input class="form-field__control input" type="text" name="deposit" id="deposit">
+                    <span class="input-mu__caption">₽</span>
+                  </span>
+            </label>
+            <label class="checkbox">
+              <input class="checkbox__control" type="checkbox" name="none-deposit" id="none-deposit">
+              <span class="checkbox__label">Без залога</span>
+            </label>
           </div>
-        </form>
+        </fieldset>
+        <fieldset class="checkout-form__fieldset form-fieldset form-fieldset--compact">
+          <legend class="form-fieldset__caption">Возможен онлайн-показ</legend>
+          <p class="form-fieldset__description">
+            Выберите, если готовы показать объект онлайн с помощью сервисов видео‑звонков.
+          </p>
+          <label class="checkbox">
+            <input class="checkbox__control" type="checkbox" name="online-show" checked>
+            <span class="checkbox__label">Готовы показать онлайн</span>
+          </label>
+        </fieldset>
       </section>
-      <section class="checkout-section" id="section-4">
-        <h2 class="checkout-section__title">Тарифы</h2>
-        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
-          <div class="tariff-plans">
-            <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-standart"
-                   aria-describedby="tariff-plan-standart" checked>
-            <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-premium"
-                   aria-describedby="tariff-plan-premium" checked>
-            <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-max"
-                   aria-describedby="tariff-plan-max" checked>
-            <section class="tariff-plan tariff-plan--active" id="tariff-plan-standart" tabindex="0">
-              <h3 class="tariff-plan__title">Стандарт</h3>
-              <p class="tariff-plan__price">15 ₽/сутки</p>
-              <ul class="tariff-plan__options">
-                <li class="tariff-plan__option">Стандартное размещение на странице объявлений</li>
-                <li class="tariff-plan__option">Доступ к кабинету Houze Pro</li>
-                <li class="tariff-plan__option">Автопродление объявлений</li>
-              </ul>
-            </section>
-            <section class="tariff-plan tariff-plan--hit" id="tariff-plan-premium" tabindex="0">
-              <h3 class="tariff-plan__title">Премиум</h3>
-              <p class="tariff-plan__price">25 ₽/сутки</p>
-              <ul class="tariff-plan__options">
-                <li class="tariff-plan__option">Размещение на первой странице объявлений</li>
-                <li class="tariff-plan__option">Выделение цветом</li>
-                <li class="tariff-plan__option">Помощь в составлении объявления</li>
-              </ul>
-            </section>
-            <section class="tariff-plan" id="tariff-plan-max" tabindex="0">
-              <h3 class="tariff-plan__title">Максимальный</h3>
-              <p class="tariff-plan__price">35 ₽/сутки</p>
-              <ul class="tariff-plan__options">
-                <li class="tariff-plan__option">Закрепление в верхней части страницы</li>
-                <li class="tariff-plan__option">Выделение цветом</li>
-                <li class="tariff-plan__option">Выделение большим размером</li>
-              </ul>
-            </section>
-          </div>
-          <div class="checkout-form__controls">
-            <button class="checkout-form__button button button--simple" type="button" data-target="section-3">Назад
-            </button>
-            <button class="checkout-form__button button button--primary" type="submit" data-target="section-5">Далее
-            </button>
-          </div>
-        </form>
+      <section class="checkout-form__page" id="section-4">
+        <h2 class="checkout-form__page-title">Тарифы</h2>
+        <div class="tariff-plans">
+          <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-standart"
+                 aria-describedby="tariff-plan-standart" checked>
+          <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-premium"
+                 aria-describedby="tariff-plan-premium">
+          <input class="visually-hidden" type="radio" name="tariff-plan" value="tariff-plan-max"
+                 aria-describedby="tariff-plan-max">
+          <section class="tariff-plan tariff-plan--active" id="tariff-plan-standart" tabindex="0">
+            <h3 class="tariff-plan__title">Стандарт</h3>
+            <p class="tariff-plan__price">15 ₽/сутки</p>
+            <ul class="tariff-plan__options">
+              <li class="tariff-plan__option">Стандартное размещение на странице объявлений</li>
+              <li class="tariff-plan__option">Доступ к кабинету Houze Pro</li>
+              <li class="tariff-plan__option">Автопродление объявлений</li>
+            </ul>
+          </section>
+          <section class="tariff-plan tariff-plan--hit" id="tariff-plan-premium" tabindex="0">
+            <h3 class="tariff-plan__title">Премиум</h3>
+            <p class="tariff-plan__price">25 ₽/сутки</p>
+            <ul class="tariff-plan__options">
+              <li class="tariff-plan__option">Размещение на первой странице объявлений</li>
+              <li class="tariff-plan__option">Выделение цветом</li>
+              <li class="tariff-plan__option">Помощь в составлении объявления</li>
+            </ul>
+          </section>
+          <section class="tariff-plan" id="tariff-plan-max" tabindex="0">
+            <h3 class="tariff-plan__title">Максимальный</h3>
+            <p class="tariff-plan__price">35 ₽/сутки</p>
+            <ul class="tariff-plan__options">
+              <li class="tariff-plan__option">Закрепление в верхней части страницы</li>
+              <li class="tariff-plan__option">Выделение цветом</li>
+              <li class="tariff-plan__option">Выделение большим размером</li>
+            </ul>
+          </section>
+        </div>
       </section>
-      <section class="checkout-section" id="section-5">
-        <h2 class="checkout-section__title">Оплата</h2>
-        <form class="checkout-form" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
+      <section class="checkout-form__page checkout-form__page--active" id="section-5">
+        <h2 class="checkout-form__page-title">Оплата</h2>
+        <div class="payment-types">
           <div class="payment-type">
             <div class="payment-type__headline">
               <label class="payment-type__name radiobutton">
-                <input class="visually-hidden" type="radio" name="payment-method" value="credit-card">
+                <input class="radiobutton__control" type="radio" name="payment-method" value="credit-card">
                 <span class="radiobutton__label">Банковская карта</span>
               </label>
               <p class="payment-type__description">Данные вашей карты защищены 256-битным шифрованием</p>
               <ul class="payment-type__icons">
                 <li class="payment-type__icon">
-                  <img src="img/visa-color.svg" width="34" height="24" alt="visa">
+                  <img src="img/payment-type/visa.svg" width="34" height="24" alt="visa">
                 </li>
                 <li class="payment-type__icon">
-                  <img src="img/mastercard-color.svg" width="34" height="24" alt="mastercard">
+                  <img src="img/payment-type/mastercard.svg" width="34" height="24" alt="mastercard">
                 </li>
               </ul>
             </div>
@@ -545,14 +565,14 @@
           </div>
           <div class="payment-type payment-type--active">
             <div class="payment-type__headline">
-              <label class="payment-type__option radiobutton">
-                <input class="visually-hidden" type="radio" name="payment-method" value="wallet" checked>
+              <label class="payment-type__name radiobutton">
+                <input class="radiobutton__control" type="radio" name="payment-method" value="wallet" checked>
                 <span class="radiobutton__label">Houze кошелёк</span>
               </label>
               <p class="payment-type__description">Оплата из кошелька без комиссии</p>
               <ul class="payment-type__icons">
                 <li class="payment-type__icon">
-                  <img src="img/logo-wallet.svg" width="79" height="18" alt="houze">
+                  <img src="img/general/logo.svg" width="79" height="18" alt="houze">
                 </li>
               </ul>
             </div>
@@ -564,25 +584,25 @@
                 <ul class="balance__options">
                   <li class="balance__option">
                     <label class="radiobutton">
-                      <input class="visually-hidden" type="radio" name="refill-balance-method" value="card">
+                      <input class="radiobutton__control" type="radio" name="refill-balance-method" value="card">
                       <span class="radiobutton__label">Банковская карта</span>
                     </label>
                   </li>
                   <li class="balance__option">
                     <label class="radiobutton">
-                      <input class="visually-hidden" type="radio" name="refill-balance-method" value="yandex.money">
+                      <input class="radiobutton__control" type="radio" name="refill-balance-method" value="yandex.money">
                       <span class="radiobutton__label">Яндекс.Деньги</span>
                     </label>
                   </li>
                   <li class="balance__option">
                     <label class="radiobutton">
-                      <input class="visually-hidden" type="radio" name="refill-balance-method" value="apple-pay">
+                      <input class="radiobutton__control" type="radio" name="refill-balance-method" value="apple-pay">
                       <span class="radiobutton__label">ApplePay</span>
                     </label>
                   </li>
                   <li class="balance__option">
                     <label class="radiobutton">
-                      <input class="visually-hidden" type="radio" name="refill-balance-method" value="google-pay">
+                      <input class="radiobutton__control" type="radio" name="refill-balance-method" value="google-pay">
                       <span class="radiobutton__label">Google Pay</span>
                     </label>
                   </li>
@@ -601,103 +621,28 @@
                     <option>90</option>
                   </select>
                 </dd>
-                <dt class="order-params__caption order-params__caption--total">Сумма к оплате: </dt>
+                <dt class="order-params__caption order-params__caption--total">Сумма к оплате:</dt>
                 <dd class="order-params__value order-params__value--total">450 ₽</dd>
               </dl>
             </div>
           </div>
-          <div class="checkout-form__controls">
-            <button class="checkout-form__button button button--simple" type="button" data-target="section-4">
-              Назад
-            </button>
-            <button class="checkout-form__submit-button button button--primary button--disabled" type="submit">
-              Оплатить
-            </button>
-          </div>
-        </form>
+        </div>
       </section>
-    </div>
-  </article>
-
-
-  <section class="new-ad">
-    <h1 class="new-ad__title">Новое объявление</h1>
-    <form class="new-ad__form create-ad" method="post" enctype="multipart/form-data" action="#" autocomplete="off">
-      <div class="create-ad__group">
-        <h2 class="create-ad__title">Контакты</h2>
-        <fieldset class="create-ad__fieldset">
-          <legend class="create-ad__fieldset-caption">Сдает квартиру</legend>
-          <label class="create-ad__option radiobutton">
-            <input class="visually-hidden" type="radio" name="create-ad-owner" value="owner" checked>
-            <span class="radiobutton__label">Собственник</span>
-          </label>
-          <label class="create-ad__option radiobutton">
-            <input class="visually-hidden" type="radio" name="create-ad-agent" value="agent">
-            <span class="radiobutton__label">Агент</span>
-          </label>
-        </fieldset>
-        <div class="create-ad__input-wrapper">
-          <label class="create-ad__username-label" for="create-ad-username">Имя *</label>
-          <input class="create-ad__username-input" type="text" id="create-ad-username" name="create-ad-username"
-                 placeholder="Введите ваше имя">
-        </div>
-        <div class="create-ad__input-wrapper">
-          <label class="create-ad__username-label" for="create-ad-phone">Подтвердите мобильный телефон *</label>
-          <input class="create-ad__username-input" type="tel" id="create-ad-phone" name="create-ad-phone"
-                 placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _">
-        </div>
+      <div class="checkout-form__controls">
+        <button class="checkout-form__button button button--simple" type="button" data-direction="-1">Назад</button>
+        <button class="checkout-form__button button button--primary" type="button" data-direction="+1" hidden>
+          Далее
+        </button>
+        <button class="checkout-form__button button button--primary" type="submit" disabled>Оплатить</button>
       </div>
-      <div class="create-ad__group">
-        <h2 class="create-ad__title">Объект</h2>
-        <fieldset class="create-ad__fieldset">
-          <legend class="create-ad__fieldset-caption">Тип жилья</legend>
-          <label class="create-ad__option radiobutton">
-            <input class="visually-hidden" type="radio" name="create-ad-flat" value="flat" checked>
-            <span class="radiobutton__label">Квартира</span>
-          </label>
-          <label class="create-ad__option radiobutton">
-            <input class="visually-hidden" type="radio" name="create-ad-apartments" value="apartments">
-            <span class="radiobutton__label">Апартаменты</span>
-          </label>
-          <label class="create-ad__option radiobutton">
-            <input class="visually-hidden" type="radio" name="create-ad-house" value="house">
-            <span class="radiobutton__label">Дом</span>
-          </label>
-        </fieldset>
-        <div class="create-ad__input-wrapper">
-          <label class="create-ad__label" for="create-ad-address">Адрес *</label>
-          <input class="create-ad__input" type="text" id="create-ad-address" name="create-ad-address"
-                 placeholder="Укажите город, улицу, дом и квартиру">
-        </div>
-        <div class="create-ad__input-wrapper">
-          <label class="create-ad__label" for="create-ad-rooms"></label>
-          <select class="create-ad__input" name="create-ad-rooms" id="create-ad-rooms">
-            <option class="create-ad__option" value="">1</option>
-          </select>
-        </div>
-        <div class="create-ad__input-wrapper">
-          <label class="create-ad__label" for="create-ad-"></label>
-          <input class="create-ad__label" type="number" id="create-ad-" name="create-ad-square">
-        </div>
-      </div>
-      <div class="create-ad__group">
-        <h2 class="create-ad__title">Фото</h2>
-        <p class="create-ad__upload-description">
-          Загрузите фотографии всех комнат. Не допускаются к размещению фотографии с водяными знаками, чужих
-          объектов и рекламные баннеры. JPG, PNG или GIF. Максимальный размер файла 10 мб
-        </p>
-        <div class="create-ad__input-wrapper">
-          <label class="visually-hidden" for="create-ad-upload"></label>
-          <input class="create-ad__upload" type="file" id="create-ad-upload" name="create-ad-upload">
-        </div>
-      </div>
-      <button class="create-ad__button button button--accent" type="button">Далее</button>
     </form>
-  </section>
+  </article>
 </main>
 <footer class="page__footer page-footer page-footer--compact">
-  <p class="page-footer__copyright">ООО «Хауз» © 2021 Все права защищены</p>
-  <a class="page-footer__policy" href="#">Политика конфиденциальности</a>
+  <div class="container page-footer__content">
+    <p class="page-footer__copyright">ООО «Хауз» © 2021 Все права защищены</p>
+    <a class="page-footer__policy" href="#">Политика конфиденциальности</a>
+  </div>
 </footer>
 </body>
 </html>

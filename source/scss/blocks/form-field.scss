@@ -1,0 +1,33 @@
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-field__label--required {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.form-field--required .form-field__label::after {
+  content: "*";
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.form-field--size-xl .form-field__control {
+  width: 610px;
+}
+
+.form-field--size-l .form-field__control {
+  width: 470px;
+}
+
+.form-field--size-m .form-field__control {
+  width: 300px;
+}
+
+.form-field--size-s .form-field__control {
+  width: 90px;
+}

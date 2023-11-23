@@ -1,5 +1,4 @@
 .button {
-  display: inline-block;
   font-family: inherit;
   color: inherit;
   text-decoration: none;
@@ -17,6 +16,17 @@
   color: #ffffff;
   background-color: #f85a47;
   border-radius: 30px;
+}
+
+.button--primary {
+  padding: 14px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #f85a47;
+  border: 1px solid #f85a47;
+  border-radius: 6px;
 }
 
 .button--secondary {
@@ -39,10 +49,20 @@
   border: 1px solid #d6d7d9;
 }
 
-.button:hover {
+.button[disabled] {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #d6d7d9;
+  border: 1px solid #d6d7d9;
+  cursor: default;
+}
+
+.button:not(.button[disabled]):hover {
   opacity: 0.7;
 }
 
-.button:active {
+.button:not(.button[disabled]):active {
   opacity: 0.5;
 }

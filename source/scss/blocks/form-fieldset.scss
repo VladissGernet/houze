@@ -1,0 +1,42 @@
+.form-fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  padding-bottom: 30px;
+  border: none;
+}
+
+.form-fieldset__caption {
+  padding: 0;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.form-fieldset__description {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 330px;
+}
+
+.form-fieldset--compact {
+  gap: 15px;
+}
+
+.form-fieldset--compact .form-fieldset__caption {
+  margin-bottom: 15px;
+}
+
+.form-fieldset__column-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px 40px;
+}
+
+.form-fieldset__column-layout--single {
+  display: block;
+  width: 290px;
+}

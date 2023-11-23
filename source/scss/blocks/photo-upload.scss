@@ -1,0 +1,115 @@
+.photo-upload__description {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #979899;
+}
+
+.photo-upload__control {
+  display: none;
+}
+
+.photo-upload__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px 20px;
+  width: 840px;
+  min-height: 160px;
+  font-size: 14px;
+  line-height: 1;
+  color: #0a121f;
+  border: 1px solid #d6d7d9;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.photo-upload__label {
+  color: #f85a47;
+  padding: 13px 24px;
+  border: 1px solid #f85a47;
+  border-radius: 6px;
+  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.photo-upload__previews {
+  display: flex;
+  gap: 15px;
+}
+
+.photo-upload__preview {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.photo-upload__img {
+  vertical-align: middle;
+}
+
+.photo-upload__buttons {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 10px;
+  gap: 10px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(10, 18, 31, 0.4);
+}
+
+.photo-upload__preview:hover .photo-upload__buttons {
+  display: flex;
+}
+
+.photo-upload__button {
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  border: none;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-upload__button-icon {
+  stroke: #f85a47;
+  width: 14px;
+  height: 14px;
+}
+
+.photo-upload--filled .photo-upload__content {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.photo-upload--filled .photo-upload__label {
+  width: 170px;
+  height: 120px;
+  font-size: 12px;
+  line-height: 1;
+  border: 1px solid #f85a47;
+  border-radius: 4px;
+  background-image: url("../img/photo-upload/upload.svg");
+  background-repeat: no-repeat;
+  background-position: top 30px center;
+  padding-top: 70px;
+}
+
+.photo-upload--filled .photo-upload__label-text {
+  display: none;
+}
